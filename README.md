@@ -1,5 +1,5 @@
 # Amazon_Vine_Analysis
-Analysis ON Big Data of Amazon's Paid Vine Program Reviews from AWS with implementation of ETL methods with Hadoop and PySpark, Python, PostgreSQL, pgAdmin, and Amazon's S3 and RDS. 
+Analysis on Big Data of Amazon's Paid Vine Program Reviews from AWS with implementation of ETL methods with Hadoop and PySpark, Python, PostgreSQL, pgAdmin, and Amazon's S3 and RDS. 
 
 ## Resources:
 <details>
@@ -10,6 +10,10 @@ Analysis ON Big Data of Amazon's Paid Vine Program Reviews from AWS with impleme
 
 <details>
 <summary>Software and IDE:</summary>
+  
+  - Google Colab 
+  - PostgreSQL
+    - pgAdmin
 
 </details>
 
