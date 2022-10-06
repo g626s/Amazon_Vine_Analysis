@@ -37,6 +37,20 @@ Using our knowledge of the cloud ETL process, we created an AWS RDS database wit
 
 ![image](https://user-images.githubusercontent.com/107281474/194203528-72813683-b3f1-4835-9fc6-0b3b94d20360.png)
 
+We then created a new database with `Amazon RDS` and also from `pgAdmin` connected to our `Amazon RDS` server.
+In `pgAdmin`, we ran a new query to create the tables for our new database using the code from the provided `challenge_schema.sql` file.
+After running the query, we created the following four tables in our database: 
+- `customers_table`
+- `products_table`
+- `review_id_table`
+- `vine_table`
+
+![Screen Shot 2022-10-03 at 11 58 15 AM](https://user-images.githubusercontent.com/107281474/194401810-b396aef8-0bb5-469d-8e41-27fa99066c7d.png)
+
+![Screen Shot 2022-10-03 at 12 00 09 PM](https://user-images.githubusercontent.com/107281474/194402310-8a25a16a-4d20-41cd-8f86-11fdc292ccd2.png)
+
+
+
 ### _Determine Bias of Vine Reviews_
 
 ## Results: 
