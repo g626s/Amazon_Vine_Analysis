@@ -32,7 +32,12 @@ The overview of this project was analyzing Amazon reviews written by members of 
 
 In this project, we had access to approximately 50 datasets. Each one contains reviews of a specific product, from clothing apparel to wireless products. For the analysis we picked the [US Apparel Dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt) and used PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. We then used PySpark on Google Colab to determine if there is any bias toward favorable reviews from Vine members in the selected dataset.
 
+### _Perform ETL on Amazon Product Reviews_
+Using our knowledge of the cloud ETL process, we created an AWS RDS database with tables in pgAdmin, and picked the [US Apparel Dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt). All datasets have the same schemata, as shown in this image:
 
+![image](https://user-images.githubusercontent.com/107281474/194203528-72813683-b3f1-4835-9fc6-0b3b94d20360.png)
+
+### _Determine Bias of Vine Reviews_
 
 ## Results: 
 
