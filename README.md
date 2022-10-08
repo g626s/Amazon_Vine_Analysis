@@ -49,7 +49,15 @@ After running the query, we created the following four tables in our database:
 
 ![Screen Shot 2022-10-03 at 12 00 09 PM](https://user-images.githubusercontent.com/107281474/194402310-8a25a16a-4d20-41cd-8f86-11fdc292ccd2.png)
 
+Originally we downladed the `Amazon_Reviews_ETL_starter_code.ipynb`, then uploaded the file as a Google Colab Notebook to begin the ETL process. The reason why Google Colab was chosen for this project was primarily in order for `PySpark` to run. The whole DataFrame was then transformed and divided into four smaller DataFrames for better understanding of the dataset and overall analysis of the project. 
 
+_customers_table DataFrame_
+- Cell Code:
+```
+customers_df = df.groupby("customer_id").agg({"customer_id": "count"}).withColumnRenamed("count(customer_id)", "customer_count")
+customers_df.show()
+```
+<img width="1212" alt="Screen Shot 2022-10-08 at 2 09 41 PM" src="https://user-images.githubusercontent.com/107281474/194727964-486e8448-3623-49b5-9dcc-e553606da2ab.png">
 
 ### _Determine Bias of Vine Reviews_
 
