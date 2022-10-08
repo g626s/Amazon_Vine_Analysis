@@ -25,8 +25,6 @@ Analysis on Big Data of Amazon's Paid Vine Program Reviews from AWS with impleme
     - Relational Database Service `RDS`
 </details>
 
-
-
 ## Overview of the analysis of the Vine Program:
 The overview of this project was analyzing Amazon reviews written by members of the paid Amazon Vine program. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies like SellBy pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review.
 
@@ -57,7 +55,37 @@ _customers_table DataFrame_
 customers_df = df.groupby("customer_id").agg({"customer_id": "count"}).withColumnRenamed("count(customer_id)", "customer_count")
 customers_df.show()
 ```
+
 <img width="1212" alt="Screen Shot 2022-10-08 at 2 09 41 PM" src="https://user-images.githubusercontent.com/107281474/194727964-486e8448-3623-49b5-9dcc-e553606da2ab.png">
+
+_products_table DataFrame_
+```
+products_df = df.select(["product_id", "product_title"]).dropDuplicates(["product_id"])
+products_df.show()
+```
+
+<img width="917" alt="Screen Shot 2022-10-08 at 3 06 13 PM" src="https://user-images.githubusercontent.com/107281474/194729385-68498cf8-604c-4365-805a-1a6b71c2aa4f.png">
+
+
+_review_id_table DataFrame_
+- Cell Code:
+```
+review_id_df = df.select(["review_id", "customer_id", "product_id", "product_parent", to_date("review_date", 'yyyy-MM-dd').alias("review_date")])
+review_id_df.show()
+```
+
+<img width="1185" alt="Screen Shot 2022-10-08 at 3 00 26 PM" src="https://user-images.githubusercontent.com/107281474/194729343-b1e9e4e5-d991-4f66-8039-182686b645aa.png">
+
+_vine_table DataFrame_
+- Cell Code: 
+```
+vine_df = df.select(["review_id", "star_rating", "helpful_votes", "total_votes", "vine", "verified_purchase"])
+vine_df.show()
+```
+
+<img width="1188" alt="Screen Shot 2022-10-08 at 3 02 45 PM" src="https://user-images.githubusercontent.com/107281474/194729350-643f1434-9d6f-45ce-b5c8-4db57e3fd7d6.png">
+
+The next iteration of the analysis was loading the DataFrames into `pgAdmin` and make the connection to oue `AWS RDS` instance. Then we loaded the DataFrames that correspond to tables in `pgAdmin` and ran a query to check that the tables have been populated.
 
 ### _Determine Bias of Vine Reviews_
 
