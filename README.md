@@ -59,6 +59,7 @@ customers_df.show()
 <img width="1212" alt="Screen Shot 2022-10-08 at 2 09 41 PM" src="https://user-images.githubusercontent.com/107281474/194727964-486e8448-3623-49b5-9dcc-e553606da2ab.png">
 
 _products_table DataFrame_
+- Cell Code:
 ```
 products_df = df.select(["product_id", "product_title"]).dropDuplicates(["product_id"])
 products_df.show()
