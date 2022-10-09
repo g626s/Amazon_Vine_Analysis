@@ -88,10 +88,24 @@ vine_df.show()
 
 The next iteration of the analysis was loading the DataFrames into `pgAdmin` and make the connection to oue `AWS RDS` instance. Then we loaded the DataFrames that correspond to tables in `pgAdmin` and ran a query to check that the tables have been populated.
 
+### _Determine Bias of Vine Reviews_
 Using our knowledge of PySpark, we then determined if there is any bias towards reviews that were written as part of the Vine program. For this analysis, we determined if having a paid Vine review makes a difference in the percentage of 5-star reviews. We first, filtered the data and created a new DataFrame to retrieve all the rows where the `total_votes` count is equal to or greater than 20 to pick reviews that are more likely to be helpful and to avoid having division by zero errors later on. Next, we filtered the new DataFrame created previously and created a new DataFrame to retrieve all the rows where the number of `helpful_votes` divided by `total_votes` is equal to or greater than _50%_. Then, we filtered the DataFrame or table created previously and made a new DataFrame  that retrieves all the rows where a review was written as part of the Vine program (paid), _vine == 'Y'_. Then we duplicated the last table and modified it to where this time we retrieved all the rows where the review was not part of the Vine program (unpaid), _vine == 'N'_. Lastly, we determined the _total number of reviews_, _the number of 5-star reviews_, and _the percentage of 5-star reviews_ for _the two types of review (paid vs unpaid)_.
 
-### _Determine Bias of Vine Reviews_
-
 ## Results: 
+- How many Vine Reviews and non-Vine reviews were there?
+  - Total Vine Reviews: _33_
+  - Total non-Vine Reviews: _45,388_
+
+- How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+  - 5-star Vine reviews: _15_
+  - 5-star non-Vine reviews: _23,733_
+
+- What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+  - Percentage of 5-star Vine Reviews: _45.45%
+  - Percentage of 5-star non-Vine Reviews: _52.29%
+
+_Technical Analysis:_
+
+<img width="1001" alt="Screen Shot 2022-10-09 at 3 19 49 PM" src="https://user-images.githubusercontent.com/107281474/194782135-19e44be9-e239-4537-9e1b-e781145a6586.png">
 
 ## Summary: 
