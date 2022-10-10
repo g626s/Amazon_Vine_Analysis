@@ -109,17 +109,7 @@ _Technical Analysis:_
 <img width="1001" alt="Screen Shot 2022-10-09 at 3 19 49 PM" src="https://user-images.githubusercontent.com/107281474/194782135-19e44be9-e239-4537-9e1b-e781145a6586.png">
 
 ## Summary: 
-From the results, the Vine Program is not sufficient for the apparel category that was chosen for the analysis. Out of the total helpful reviews, less than _50%_ of them were 5-star rated that is very significant and important for categorical review/placement. The same pattern is true and apparent for the unpaid reviews. We can also infer that the Vine program is not popular in this category. We can safely say for certain that there is in fact no bias for the Vine member reviews. One recommendation that could be enacted and incorporated for better bias conclusion is a significantly larger dataset either through oversampling or undersampling.
+From the results, the Vine Program is not sufficient for the apparel category that was chosen for the analysis. Out of the total helpful reviews, less than _50%_ of them were 5-star rated which is very significant and important for categorical review/placement. The same pattern is true and apparent for the unpaid reviews. We can also infer that the Vine program is not popular in this category. We can safely say for certain that there is in fact no bias for the Vine member reviews. One recommendation that could be enacted and incorporated for better bias conclusion is a significantly larger dataset either through oversampling or undersampling.
 
-
-
-
-
-
-
-
-
-
-
-
-
+_Recommended Supporting Analysis:_
+One recommendation that can be implemented to support this statement is calculating the mean of each star ratings on each program's review and see if there are any trends or significant incentives. Additionally, we could incorporate a NLP sentiment analysis to analyze key words or phrases used in the majority of the reviews. 
